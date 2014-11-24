@@ -1,0 +1,23 @@
+{
+  "name": "twilio-tessel",
+  "version": "0.0.1",
+  "description": "INtegrating twilio into a tessel project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beleblanc/tessel"
+  },
+  "keywords": [
+    "tessel",
+    "twilio"
+  ],
+  "author": "Benoit LeBlanc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beleblanc/tessel/issues"
+  },
+  "homepage": "https://github.com/beleblanc/tessel"
+}
