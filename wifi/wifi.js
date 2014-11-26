@@ -1,7 +1,7 @@
 var wifi = require('wifi-cc3000');
 var network = 'AndroidAP' // put in your network name here
-var pass = ''; // put in your password here, or leave blank for unsecured
-var security = 'unsecured'; // other options are 'wep', 'wpa', or 'unsecured'
+var pass = 'Emile@77'; // put in your password here, or leave blank for unsecured
+var security = 'wpa2'; // other options are 'wep', 'wpa', or 'unsecured'
 
 // connect to the wifi network
 // check if the wifi chip is busy (currently trying to connect), if not, try to connect
