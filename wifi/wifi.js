@@ -1,6 +1,7 @@
 var wifi = require('wifi-cc3000');
-var network = 'AndroidAP' // put in your network name here
-var pass = 'Emile@77'; // put in your password here, or leave blank for unsecured
+var credentials = require('../twilio/credentials.js');
+var network = credentials.wifi_name // put in your network name here
+var pass = credentials.wifi_password; // put in your password here, or leave blank for unsecured
 var security = 'wpa2'; // other options are 'wep', 'wpa', or 'unsecured'
 
 // connect to the wifi network

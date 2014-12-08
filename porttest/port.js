@@ -6,9 +6,11 @@ var old_value = pin.read();
 setInterval(function(){
   var new_value = pin.read();
   
-  if((old_value/new_value) > 1.5)
+/*  if((old_value/new_value) > 1.5)
   {
     console.log("Alarm has been set off. Old Value: "+ old_value +", New Value:" + new_value);
   }
-  old_value = new_value;
+  old_value = new_value; */
+  
+  console.log(new_value);
 },300);

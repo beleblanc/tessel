@@ -1,9 +1,11 @@
+//Load Wifi library to see if the connection is up
+var wifi = require('wifi-cc3000');
+//Load Credentials from a seperate file
 var credentials = require('./credentials.js');
-console.log("Credential loaded");
+//Tessel Base Library
 var tessel = require('tessel');
-console.log("Tessel loaded");
+//
 var client = require('twilio')(credentials.twilio_sid,credentials.twilio_token);  
-console.log("Twilio loaded");
 var gpio = tessel.port['GPIO'];
 var pin  = gpio.analog[0];  
 
