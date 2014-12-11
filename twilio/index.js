@@ -4,7 +4,7 @@
 var credentials = require('./credentials.js');
 //Tessel Base Library
 var tessel = require('tessel');
-//
+var wifi = require('./../wifi/wifi.js');//
 var client = require('twilio')(credentials.twilio_sid, credentials.twilio_token);
 var gpio = tessel.port['GPIO'];
 var pin = gpio.analog[0];
@@ -16,7 +16,10 @@ setInterval(function () {
   var new_value = pin.read();
 
   if ((old_value / new_value) > 1.5) {
-
+    while(!wifi.isConnected())
+    {
+      wifi.tryConnect();
+    }
     sendText("+15062327733", credentials.twilio_number, "Alarm has been set off at athena");
   }
   old_value = new_value;

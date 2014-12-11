@@ -6,7 +6,7 @@ var security = 'wpa2'; // other options are 'wep', 'wpa', or 'unsecured'
 
 // connect to the wifi network
 // check if the wifi chip is busy (currently trying to connect), if not, try to connect
-function tryConnect(){
+wifi.tryConnect = function (){
   if (!wifi.isBusy()) {
     connect();
   } else {
@@ -15,7 +15,7 @@ function tryConnect(){
     // see the wifi chip as being "busy"
     console.log("is busy, trying again");
     setTimeout(function(){
-      tryConnect();
+      wifi.tryConnect();
     }, 1000);
   } 
 }
@@ -52,5 +52,7 @@ wifi.on('error', function(err){
   // 3. tried to initialize a connection without first waiting for a timeout or a disconnect
   console.log("error emitted", err);
 });
-setTimeout(tryConnect(),6000);
+setTimeout(wifi.tryConnect(),6000);
 
+
+module.exports = wifi;
