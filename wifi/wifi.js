@@ -1,5 +1,5 @@
 var wifi = require('wifi-cc3000');
-var credentials = require('../twilio/credentials.js');
+var credentials = require('./../twilio/credentials.js');
 var network = credentials.wifi_name // put in your network name here
 var pass = credentials.wifi_password; // put in your password here, or leave blank for unsecured
 var security = 'wpa2'; // other options are 'wep', 'wpa', or 'unsecured'
@@ -53,3 +53,4 @@ wifi.on('error', function(err){
   console.log("error emitted", err);
 });
 setTimeout(tryConnect(),6000);
+
